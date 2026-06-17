@@ -81,6 +81,13 @@ Python was installed.
 
 > **Always keep a backup of your original image before overwriting it.**
 
+### Getting the image to and from your device
+
+How you transfer the image depends on your setup. For a networked device the
+file is typically copied with `scp`, for example:
+
+```bash
+scp xbox_hdd.qcow2 user@device-address:/path/to/xbox_hdd.qcow2
 ```
 
 Consult your emulator or device documentation for the exact location of the
@@ -90,17 +97,16 @@ Xbox hard-drive image.
 
 ## How it works
 
-## How it works
-
 The app is organised into a small engine plus a GUI:
 
-```text
+```
 .
 ├── app.py                  # GUI application
 └── engine/
     ├── qcow2.py            # pure-Python qcow2 <-> raw image conversion
     ├── fatx.py             # FATX filesystem reader/writer
     └── soundtrack.py       # audio conversion + ST.DB database builder
+```
 
 - **qcow2** images are expanded to raw and recompressed entirely in Python, so
   qemu is not a dependency. Output is verified to pass `qemu-img check`.
