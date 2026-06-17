@@ -81,13 +81,6 @@ Python was installed.
 
 > **Always keep a backup of your original image before overwriting it.**
 
-### Getting the image to and from your device
-
-How you transfer the image depends on your setup. For a networked device the
-file is typically copied with `scp`, for example:
-
-```bash
-scp xbox_hdd.qcow2 user@device-address:/path/to/xbox_hdd.qcow2
 ```
 
 Consult your emulator or device documentation for the exact location of the
