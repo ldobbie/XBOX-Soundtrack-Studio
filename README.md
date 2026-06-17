@@ -90,16 +90,17 @@ Xbox hard-drive image.
 
 ## How it works
 
+## How it works
+
 The app is organised into a small engine plus a GUI:
 
-```
+```text
 .
 ├── app.py                  # GUI application
 └── engine/
     ├── qcow2.py            # pure-Python qcow2 <-> raw image conversion
     ├── fatx.py             # FATX filesystem reader/writer
     └── soundtrack.py       # audio conversion + ST.DB database builder
-```
 
 - **qcow2** images are expanded to raw and recompressed entirely in Python, so
   qemu is not a dependency. Output is verified to pass `qemu-img check`.
