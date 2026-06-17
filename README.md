@@ -105,8 +105,7 @@ The app is organised into a small engine plus a GUI:
 └── engine/
     ├── qcow2.py            # pure-Python qcow2 <-> raw image conversion
     ├── fatx.py             # FATX filesystem reader/writer
-    ├── soundtrack.py       # audio conversion + ST.DB database builder
-    └── ffmpeg_locate.py    # locates ffmpeg/ffprobe across platforms
+    └── soundtrack.py       # audio conversion + ST.DB database builder
 ```
 
 - **qcow2** images are expanded to raw and recompressed entirely in Python, so
